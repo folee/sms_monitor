@@ -1,0 +1,14 @@
+<html>
+  <head></head>
+
+    <body background="foto.jpg">
+      <FONT color="#79BAEC" ><center><h1>How to edit the database:</h1></center></FONT>
+      <hr />
+      <FONT COLOR="#ffffff"><p align = "left">First of all download this file: <a href = "http://sqlitebrowser.sourceforge.net/">SQLite Database Browser</a></p>
+      <p></p>
+      <p>Select <b>Open</b> and choose your database.</p>
+      <p>Go to the tab <i>Browse data</i> and choose the right table.</p>
+      <p>Do whatever you want with the database. It is very easy to understand...</p>
+      <p>Finally save the edited database and copy it to the SD card...</p></FONT>
+    </body>
+</html>

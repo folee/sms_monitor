@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.emerson.smsmonitor"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="8" />
+    
+    
+    <!-- Permission used to write files the SD card -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Permissions used to send and receive messages -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!-- Permissions used to read the messages and resend them -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <!-- Permission used to read the contacts -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- Permission used to launch on boot -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- Permission used to display alert dialog in service -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />  
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" /> 
+    
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" 
+        android:allowBackup="true" >
+
+
+        <!-- The service used to Monitor the SMS via SMS -->
+        <service
+            android:name=".SMSMonitorService"
+            android:enabled="true" >
+        </service>
+
+        <!-- Activity used to monitor the phone via SMS -->
+        <activity
+            android:name=".MonitorSMS"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- The receiver that will launch SMS monitor on boot -->
+        <receiver android:name=".LaunchOnBoot" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+
+</manifest>

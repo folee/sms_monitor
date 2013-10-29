@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World!</string>
+    <string name="app_name">Sms Moniter</string>
+
+    <!-- Strings used in info.xml -->
+    <string name = "about">About</string>
+    <string name = "infoVersion">Current version: </string>
+    <string name = "autoSendSMS">Auto send a SMS</string>
+    <string name = "ok">OK</string>
+    <string name = "contact">(%s)</string>
+    
+    
+    <!-- Strings used in Infopreferences.xml -->
+    <string name = "auto_reboot_title">Auto reboot</string>
+    <string name = "auto_reboot_summary">Reboot the phone automatically after importing the DB</string>
+    
+    
+    <!-- Strings used in autosendsmsmenu.xml -->
+    <string name = "startService">Start service</string>
+    <string name = "stopService">Stop service</string>
+    
+    <!-- Strings used in monitorsms.xml -->
+    <string name = "monitorStart">Start monitoring</string>
+    <string name = "monitorStop">Stop monitoring</string>
+    
+</resources>
